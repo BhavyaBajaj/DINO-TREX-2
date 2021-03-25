@@ -50,7 +50,7 @@ function setup() {
   gameOver = createSprite(displayWidth/2,100);
   gameOver.addImage(gameOverImg);
   
-  restart = createSprite(300,140);
+  restart = createSprite(displayWidth/2,140);
   restart.addImage(restartImg);
   
   gameOver.scale = 0.5;
@@ -71,7 +71,7 @@ function setup() {
 function draw() {
   //trex.debug = true;
   background(255);
-  text("Score: "+ score, 500,50);
+  text("Score: "+ score, 100,50);
   
   if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
@@ -126,7 +126,7 @@ function draw() {
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 60 === 0) {
-    var cloud = createSprite(600,120,40,10);
+    var cloud = createSprite(displayWidth,120,10,40);
     cloud.y = Math.round(random(80,120));
     cloud.addImage(cloudImage);
     cloud.scale = 0.5;
