@@ -34,7 +34,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600, 200);
+  createCanvas(displayWidth, 500);
   
   trex = createSprite(50,180,20,50);
   
@@ -47,7 +47,7 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
   
-  gameOver = createSprite(300,100);
+  gameOver = createSprite(displayWidth/2,100);
   gameOver.addImage(gameOverImg);
   
   restart = createSprite(300,140);
@@ -147,7 +147,7 @@ function spawnClouds() {
 
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
-    var obstacle = createSprite(600,165,10,40);
+    var obstacle = createSprite(displayWidth,165,10,40);
     //obstacle.debug = true;
     obstacle.velocityX = -(6 + 3*score/100);
     
