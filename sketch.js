@@ -30,11 +30,11 @@ function preload(){
   obstacle6 = loadImage("obstacle6.png");
   
   gameOverImg = loadImage("gameOver.png");
-  restartImg = loadImagE("restart.png");
+  restartImg = loadImage("restart.png");
 }
 
 function setup() {
-  createCanvas(displayWidth, 500);
+  createCanvas(displayWidth, displayHeight);
   
   trex = createSprite(50,180,20,50);
   
