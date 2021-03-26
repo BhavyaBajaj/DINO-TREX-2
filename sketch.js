@@ -42,7 +42,7 @@ function setup() {
   trex.addAnimation("collided", trex_collided);
   trex.scale = 0.5;
   
-  ground = createSprite(200,180,displayWidth*2,displayHeight);
+  ground = createSprite(200,180,400,20);
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
@@ -59,7 +59,7 @@ function setup() {
   gameOver.visible = false;
   restart.visible = false;
   
-  invisibleGround = createSprite(200,190,displayWidth*2,displayHeight);
+  invisibleGround = createSprite(200,190,400,10);
   invisibleGround.visible = false;
   
   cloudsGroup = new Group();
